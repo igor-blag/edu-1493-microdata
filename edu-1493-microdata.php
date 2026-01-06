@@ -1,8 +1,16 @@
 <?php
 /**
- * Plugin Name: Edu 1493 Microdata Extender
+ * Plugin Name: Edu 1493 Microdata
  * Description: Добавляет поле itemprop к стандартным блокам Gutenberg (Группа, Абзац, Столбцы и др.)
- * Version: 1.0
+ * Version: 1.0.0
+ * Author: Игорь Благовещенский
+ * Plugin URI: https://no-it.ru/wordpress-plugins/edu-1493-microdata/
+ * Author URI: https://no-it.ru 
+ * Requires at least: 6.4
+ * Requires PHP: 8.2 
+ * License: GPL v3 or later
+ * License URI: www.gnu.org
+ * Text Domain: edu-1493-microdata
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
