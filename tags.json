@@ -1,0 +1,294 @@
+{
+  "common": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+    { "label": "Полное наименование организации (fullName)", "value": "fullName" },
+    { "label": "Сокращенное наименование организации (shortName)", "value": "shortName" },
+    { "label": "Дата создания организации (regDate)", "value": "regDate" },
+    
+    { "label": "ДАННЫЕ ОБ УЧРЕДИТЕЛЕ (Контейнер: uchredLaw)", "value": "uchredLaw", "isContainer": true },
+    { "label": "— Наименование учредителя (nameUchred)", "value": "nameUchred", "parent": "uchredLaw" },
+    { "label": "— Адрес учредителя (addressUchred)", "value": "addressUchred", "parent": "uchredLaw" },
+    { "label": "— Телефон учредителя (telUchred)", "value": "telUchred", "parent": "uchredLaw" },
+    { "label": "— E-mail учредителя (mailUchred)", "value": "mailUchred", "parent": "uchredLaw" },
+    { "label": "— Сайт учредителя (websiteUchred)", "value": "websiteUchred", "parent": "uchredLaw" },
+
+    { "label": "Место нахождения организации (address)", "value": "address" },
+    { "label": "Режим и график работы (workTime)", "value": "workTime" },
+    { "label": "Контактный телефон (telephone)", "value": "telephone" },
+    { "label": "Адрес электронной почты (email)", "value": "email" },
+    { "label": "Ссылка на лицензию (licenseDocLink)", "value": "licenseDocLink" },
+    { "label": "Ссылка на аккредитацию (accreditationDocLink)", "value": "accreditationDocLink" },
+    
+    { "label": "Места деят-ти: сетевая форма (addressPlaceSet)", "value": "addressPlaceSet" },
+    { "label": "Места проведения практики (addressPlacePrac)", "value": "addressPlacePrac" },
+    { "label": "Места практической подготовки (addressPlacePodg)", "value": "addressPlacePodg" },
+    { "label": "Места проведения ГИА (addressPlaceGia)", "value": "addressPlaceGia" },
+    { "label": "Места доп. образовательных программ (addressPlaceDop)", "value": "addressPlaceDop" },
+    { "label": "Места программ проф. обучения (addressPlaceOppo)", "value": "addressPlaceOppo" }
+  ],
+  "struct": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+  
+    { "label": "СТРУКТУРА И ОРГАНЫ УПРАВЛЕНИЯ (Контейнер: structOrgUprav)", "value": "structOrgUprav", "isContainer": true },
+    { "label": "— Наименование подразделения (name)", "value": "name", "parent": "structOrgUprav" },
+    { "label": "— ФИО руководителей (fio)", "value": "fio", "parent": "structOrgUprav" },
+    { "label": "— Должность руководителя (post)", "value": "post", "parent": "structOrgUprav" },
+    { "label": "— Место нахождения подразделения (addressStr)", "value": "addressStr", "parent": "structOrgUprav" },
+    { "label": "— Сайт подразделения (site)", "value": "site", "parent": "structOrgUprav" },
+    { "label": "— E-mail подразделения (email)", "value": "email", "parent": "structOrgUprav" },
+    { "label": "— Положение о подразделении (divisionClauseDocLink)", "value": "divisionClauseDocLink", "parent": "structOrgUprav" },
+  
+    { "label": "СВЕДЕНИЯ О ФИЛИАЛЕ (Контейнер: filInfo)", "value": "filInfo", "isContainer": true },
+    { "label": "— Наименование филиала (nameFil)", "value": "nameFil", "parent": "filInfo" },
+    { "label": "— ФИО руководителя филиала (fioFil)", "value": "fioFil", "parent": "filInfo" },
+    { "label": "— Должность руководителя филиала (postFil)", "value": "postFil", "parent": "filInfo" },
+    { "label": "— Место нахождения филиала (addressFil)", "value": "addressFil", "parent": "filInfo" },
+    { "label": "— E-mail филиала (emailFil)", "value": "emailFil", "parent": "filInfo" },
+    { "label": "— Сайт филиала (websiteFil)", "value": "websiteFil", "parent": "filInfo" },
+    { "label": "— Положение о филиале (divisionClauseDocLink)", "value": "divisionClauseDocLink", "parent": "filInfo" },
+  
+    { "label": "СВЕДЕНИЯ О ПРЕДСТАВИТЕЛЬСТВЕ (Контейнер: repInfo)", "value": "repInfo", "isContainer": true },
+    { "label": "— Наименование представительства (nameRep)", "value": "nameRep", "parent": "repInfo" },
+    { "label": "— ФИО руководителя представительства (fioRep)", "value": "fioRep", "parent": "repInfo" },
+    { "label": "— Должность руководителя представительства (postRep)", "value": "postRep", "parent": "repInfo" },
+    { "label": "— Место нахождения представительства (addressRep)", "value": "addressRep", "parent": "repInfo" },
+    { "label": "— E-mail представительства (emailRep)", "value": "emailRep", "parent": "repInfo" },
+    { "label": "— Сайт представительства (websiteRep)", "value": "websiteRep", "parent": "repInfo" },
+    { "label": "— Положение о представительстве (divisionClauseDocLink)", "value": "divisionClauseDocLink", "parent": "repInfo" }
+  ],
+  "document": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+    { "label": "Устав образовательной организации (ustavDocLink)", "value": "ustavDocLink" },
+    { "label": "Лок. акт: Правила распорядка обучающихся (localActStud)", "value": "localActStud" },
+    { "label": "Лок. акт: Правила трудового распорядка (localActOrder)", "value": "localActOrder" },
+    { "label": "Коллективный договор (localActCollec)", "value": "localActCollec" },
+    { "label": "Отчёт о результатах самообследования (reportEduDocLink)", "value": "reportEduDocLink" },
+    { "label": "Предписания органов и отчеты (prescriptionDocLink)", "value": "prescriptionDocLink" },
+    { "label": "Лок. акт: Правила приема обучающихся (priemDocLink)", "value": "priemDocLink" },
+    { "label": "Лок. акт: Режим занятий обучающихся (modeDocLink)", "value": "modeDocLink" },
+    { "label": "Лок. акт: О формах и порядке аттестации (tekKontrolDocLink)", "value": "tekKontrolDocLink" },
+    { "label": "Лок. акт: Порядок перевода и отчисления (perevodDocLink)", "value": "perevodDocLink" },
+    { "label": "Лок. акт: Порядок оформления отношений (vozDocLink)", "value": "vozDocLink" }
+  ],
+  "education": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+  
+    { "label": "РЕАЛИЗУЕМЫЕ УРОВНИ И СРОКИ (Контейнер: eduAccred)", "value": "eduAccred", "isContainer": true },
+    { "label": "— Код специальности/направления (eduCode)", "value": "eduCode", "parent": "eduAccred" },
+    { "label": "— Наименование профессии/программы (eduName)", "value": "eduName", "parent": "eduAccred" },
+    { "label": "— Направленность/профиль (eduProf)", "value": "eduProf", "parent": "eduAccred" },
+    { "label": "— Уровень образования (eduLevel)", "value": "eduLevel", "parent": "eduAccred" },
+    { "label": "— Форма обучения (eduForm)", "value": "eduForm", "parent": "eduAccred" },
+    { "label": "— Нормативный срок обучения (learningTerm)", "value": "learningTerm", "parent": "eduAccred" },
+    { "label": "— Учебные предметы/курсы (eduPred)", "value": "eduPred", "parent": "eduAccred" },
+    { "label": "— Практики по программе (eduPrac)", "value": "eduPrac", "parent": "eduAccred" },
+  
+    { "label": "Языки образования (languageEl)", "value": "languageEl" },
+    { "label": "Численность обучающихся (eduChislenEl)", "value": "eduChislenEl" },
+    { "label": "Результаты приема (eduPriemEl)", "value": "eduPriemEl" },
+    { "label": "Результаты перевода/отчисления (eduPerevodEl)", "value": "eduPerevodEl" },
+  
+    { "label": "ОБРАЗОВАТЕЛЬНАЯ ПРОГРАММА (Контейнер: eduOp)", "value": "eduOp", "isContainer": true },
+    { "label": "— Код специальности (eduCode)", "value": "eduCode", "parent": "eduOp" },
+    { "label": "— Наименование специальности (eduName)", "value": "eduName", "parent": "eduOp" },
+    { "label": "— Уровень образования (eduLevel)", "value": "eduLevel", "parent": "eduOp" },
+    { "label": "— Направленность/профиль (eduProf)", "value": "eduProf", "parent": "eduOp" },
+    { "label": "— Формы обучения (eduForm)", "value": "eduForm", "parent": "eduOp" },
+    { "label": "— Описание образовательной программы (opMain)", "value": "opMain", "parent": "eduOp" },
+    { "label": "— Учебный план (educationPlan)", "value": "educationPlan", "parent": "eduOp" },
+    { "label": "— Аннотации рабочих программ (educationRpd)", "value": "educationRpd", "parent": "eduOp" },
+    { "label": "— Календарный учебный график (educationShedule)", "value": "educationShedule", "parent": "eduOp" },
+    { "label": "— Программы практик (eduPr)", "value": "eduPr", "parent": "eduOp" },
+    { "label": "— Методические документы (methodology)", "value": "methodology", "parent": "eduOp" },
+  
+    { "label": "АДАПТИРОВАННАЯ ПРОГРАММА (Контейнер: eduAdOp)", "value": "eduAdOp", "isContainer": true },
+    { "label": "— Код (eduCode)", "value": "eduCode", "parent": "eduAdOp" },
+    { "label": "— Наименование (eduName)", "value": "eduName", "parent": "eduAdOp" },
+    { "label": "— Уровень образования (eduLevel)", "value": "eduLevel", "parent": "eduAdOp" },
+    { "label": "— Описание адаптированной программы (opMain)", "value": "opMain", "parent": "eduAdOp" },
+    { "label": "— Учебный план (educationPlan)", "value": "educationPlan", "parent": "eduAdOp" },
+    { "label": "— Рабочие программы (educationRpd)", "value": "educationRpd", "parent": "eduAdOp" },
+    { "label": "— Календарный график (educationShedule)", "value": "educationShedule", "parent": "eduAdOp" },
+    { "label": "— Программы практик (eduPr)", "value": "eduPr", "parent": "eduAdOp" },
+  
+    { "label": "НАУЧНАЯ ДЕЯТЕЛЬНОСТЬ (Контейнер: eduNir)", "value": "eduNir", "isContainer": true },
+    { "label": "— Код специальности (eduCode)", "value": "eduCode", "parent": "eduNir" },
+    { "label": "— Наименование специальности (eduName)", "value": "eduName", "parent": "eduNir" },
+    { "label": "— Перечень научных направлений (perechenNir)", "value": "perechenNir", "parent": "eduNir" },
+    { "label": "— Название научной школы (napravNir)", "value": "napravNir", "parent": "eduNir" },
+    { "label": "— Результаты научной деятельности (resultNir)", "value": "resultNir", "parent": "eduNir" },
+    { "label": "— Научно-исследовательская база (baseNir)", "value": "baseNir", "parent": "eduNir" },
+  
+    { "label": "ТРУДОУСТРОЙСТВО ВЫПУСКНИКОВ (Контейнер: graduateJob)", "value": "graduateJob", "isContainer": true },
+    { "label": "— Код специальности (eduCode)", "value": "eduCode", "parent": "graduateJob" },
+    { "label": "— Наименование (eduName)", "value": "eduName", "parent": "graduateJob" },
+    { "label": "— Численность выпускников за прошлый год (v1)", "value": "v1", "parent": "graduateJob" },
+    { "label": "— Число трудоустроенных выпускников (t1)", "value": "t1", "parent": "graduateJob" }
+  ],  
+  "eduStandarts": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+    { "label": "ФГОС и их копии (eduFedDoc)", "value": "eduFedDoc" },
+    { "label": "Утвержденные образовательные стандарты (eduStandartDoc)", "value": "eduStandartDoc" },
+    { "label": "Федеральные государственные требования (eduFedTreb)", "value": "eduFedTreb" },
+    { "label": "Самостоятельно устанавливаемые требования (eduStandartTreb)", "value": "eduStandartTreb" }
+  ],
+  "managers": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+  
+    { "label": "РУКОВОДИТЕЛЬ (Контейнер: rucovodstvo)", "value": "rucovodstvo", "isContainer": true },
+    { "label": "— ФИО руководителя (fio)", "value": "fio", "parent": "rucovodstvo" },
+    { "label": "— Должность руководителя (post)", "value": "post", "parent": "rucovodstvo" },
+    { "label": "— Контактный телефон (telephone)", "value": "telephone", "parent": "rucovodstvo" },
+    { "label": "— Адрес электронной почты (email)", "value": "email", "parent": "rucovodstvo" },
+  
+    { "label": "ЗАМЕСТИТЕЛИ РУКОВОДИТЕЛЯ (Контейнер: rucovodstvoZam)", "value": "rucovodstvoZam", "isContainer": true },
+    { "label": "— ФИО заместителя (fio)", "value": "fio", "parent": "rucovodstvoZam" },
+    { "label": "— Должность заместителя (post)", "value": "post", "parent": "rucovodstvoZam" },
+    { "label": "— Контактный телефон (telephone)", "value": "telephone", "parent": "rucovodstvoZam" },
+    { "label": "— Адрес электронной почты (email)", "value": "email", "parent": "rucovodstvoZam" },
+  
+    { "label": "РУКОВОДИТЕЛИ ФИЛИАЛОВ (Контейнер: rucovodstvoFil)", "value": "rucovodstvoFil", "isContainer": true },
+    { "label": "— Наименование филиала (nameFil)", "value": "nameFil", "parent": "rucovodstvoFil" },
+    { "label": "— ФИО руководителя филиала (fio)", "value": "fio", "parent": "rucovodstvoFil" },
+    { "label": "— Должность (post)", "value": "post", "parent": "rucovodstvoFil" },
+    { "label": "— Контактный телефон (telephone)", "value": "telephone", "parent": "rucovodstvoFil" },
+    { "label": "— Адрес электронной почты (email)", "value": "email", "parent": "rucovodstvoFil" }
+  ],
+  "employees": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+  
+    { "label": "ПЕДАГОГИЧЕСКИЙ СОСТАВ (Контейнер: teachingStaff)", "value": "teachingStaff", "isContainer": true },
+    { "label": "— ФИО педагога (fio)", "value": "fio", "parent": "teachingStaff" },
+    { "label": "— Занимаемая должность (post)", "value": "post", "parent": "teachingStaff" },
+    { "label": "— Преподаваемые дисциплины (teachingDiscipline)", "value": "teachingDiscipline", "parent": "teachingStaff" },
+    { "label": "— Уровень образования (teachingLevel)", "value": "teachingLevel", "parent": "teachingStaff" },
+    { "label": "— Ученая степень (degree)", "value": "degree", "parent": "teachingStaff" },
+    { "label": "— Ученое звание (academStat)", "value": "academStat", "parent": "teachingStaff" },
+    { "label": "— Повышение квалификации (qualification)", "value": "qualification", "parent": "teachingStaff" },
+    { "label": "— Профессиональная переподготовка (profDevelopment)", "value": "profDevelopment", "parent": "teachingStaff" },
+    { "label": "— Стаж работы по специальности (specExperience)", "value": "specExperience", "parent": "teachingStaff" },
+    { "label": "— Реализуемая образовательная программа (teachingOp)", "value": "teachingOp", "parent": "teachingStaff" }
+  ],
+  "objects": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+  
+    { "label": "УЧЕБНЫЕ КАБИНЕТЫ (Контейнер: purposeCab)", "value": "purposeCab", "isContainer": true },
+    { "label": "— Адрес кабинета (addressCab)", "value": "addressCab", "parent": "purposeCab" },
+    { "label": "— Наименование кабинета (nameCab)", "value": "nameCab", "parent": "purposeCab" },
+    { "label": "— Оснащенность кабинета (osnCab)", "value": "osnCab", "parent": "purposeCab" },
+    { "label": "— Приспособленность для инвалидов (ovzCab)", "value": "ovzCab", "parent": "purposeCab" },
+  
+    { "label": "ОБЪЕКТЫ ДЛЯ ПРАКТИКИ (Контейнер: purposePrac)", "value": "purposePrac", "isContainer": true },
+    { "label": "— Адрес объекта (addressPrac)", "value": "addressPrac", "parent": "purposePrac" },
+    { "label": "— Наименование объекта (namePrac)", "value": "namePrac", "parent": "purposePrac" },
+    { "label": "— Оснащенность объекта (osnPrac)", "value": "osnPrac", "parent": "purposePrac" },
+    { "label": "— Приспособленность для инвалидов (ovzPrac)", "value": "ovzPrac", "parent": "purposePrac" },
+  
+    { "label": "БИБЛИОТЕКА (Контейнер: purposeLibr)", "value": "purposeLibr", "isContainer": true },
+    { "label": "— Наименование библиотеки (objName)", "value": "objName", "parent": "purposeLibr" },
+    { "label": "— Адрес библиотеки (objAddress)", "value": "objAddress", "parent": "purposeLibr" },
+    { "label": "— Площадь (objSq)", "value": "objSq", "parent": "purposeLibr" },
+    { "label": "— Количество мест (objCnt)", "value": "objCnt", "parent": "purposeLibr" },
+    { "label": "— Доступность для инвалидов (objOvz)", "value": "objOvz", "parent": "purposeLibr" },
+  
+    { "label": "ОБЪЕКТЫ СПОРТА (Контейнер: purposeSport)", "value": "purposeSport", "isContainer": true },
+    { "label": "— Наименование объекта (objName)", "value": "objName", "parent": "purposeSport" },
+    { "label": "— Адрес объекта (objAddress)", "value": "objAddress", "parent": "purposeSport" },
+    { "label": "— Площадь (objSq)", "value": "objSq", "parent": "purposeSport" },
+    { "label": "— Количество мест (objCnt)", "value": "objCnt", "parent": "purposeSport" },
+    { "label": "— Доступность для инвалидов (objOvz)", "value": "objOvz", "parent": "purposeSport" },
+  
+    { "label": "Беспрепятственный доступ в здания (ovz)", "value": "ovz" },
+    { "label": "Средства обучения и воспитания (purposeFacil)", "value": "purposeFacil" },
+    { "label": "Приспособленные средства обучения (purposeFacilOvz)", "value": "purposeFacilOvz" },
+    { "label": "Доступ к ИТ-сетям (comNet)", "value": "comNet" },
+    { "label": "Доступ к приспособленным ИТ-сетям (comNetOvz)", "value": "comNetOvz" },
+    { "label": "Электронная информационно-образовательная среда (purposeEios)", "value": "purposeEios" },
+    { "label": "Перечень электронных ресурсов (erList)", "value": "erList" },
+    { "label": "Приспособленные электронные ресурсы (erListOvz)", "value": "erListOvz" },
+    { "label": "Специальные технические средства (techOvz)", "value": "techOvz" },
+  
+    { "label": "Количество общежитий (hostelInfo)", "value": "hostelInfo" },
+    { "label": "Количество интернатов (interInfo)", "value": "interInfo" },
+    { "label": "Мест в общежитиях (hostelNum)", "value": "hostelNum" },
+    { "label": "Мест в общежитиях для инвалидов (hostelNumOvz)", "value": "hostelNumOvz" },
+    { "label": "Мест в интернатах (interNum)", "value": "interNum" },
+    { "label": "Мест в интернатах для инвалидов (interNumOvz)", "value": "interNumOvz" },
+    { "label": "Условия доступа в общежития/интернаты (hostelInterOvz)", "value": "hostelInterOvz" },
+    { "label": "Лок. акт об оплате проживания (localActObSt)", "value": "localActObSt" }
+  ],
+  "grants": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+    { "label": "Локальный акт о стипендиях (localAct)", "value": "localAct" },
+    { "label": "Информация о стипендиях (grant)", "value": "grant" },
+    { "label": "Меры социальной поддержки (support)", "value": "support" },
+    { "label": "Количество общежитий (hostelInfo)", "value": "hostelInfo" },
+    { "label": "Количество интернатов (interInfo)", "value": "interInfo" },
+    { "label": "Количество мест в общежитиях (hostelNum)", "value": "hostelNum" },
+    { "label": "Места в общежитиях для инвалидов (hostelNumOvz)", "value": "hostelNumOvz" },
+    { "label": "Количество мест в интернатах (interNum)", "value": "interNum" },
+    { "label": "Места в интернатах для инвалидов (interNumOvz)", "value": "interNumOvz" },
+    { "label": "Плата за проживание в общежитии (localActObSt)", "value": "localActObSt" }
+  ],
+  "edu_paid": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+    { "label": "Порядок оказания платных услуг (paidEdu)", "value": "paidEdu" },
+    { "label": "Образец договора на платные услуги (paidDog)", "value": "paidDog" },
+    { "label": "Утверждение стоимости обучения (paidSt)", "value": "paidSt" },
+    { "label": "Плата за присмотр, уход и интернат (paidParents)", "value": "paidParents" }
+  ],
+  "budget": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+    { "label": "Объем деят-ти: федеральный бюджет (finBFVolume)", "value": "finBFVolume" },
+    { "label": "Объем деят-ти: бюджет субъекта РФ (finBRVolume)", "value": "finBRVolume" },
+    { "label": "Объем деят-ти: местный бюджет (finBMVolume)", "value": "finBMVolume" },
+    { "label": "Объем деят-ти: платные услуги (finPVolume)", "value": "finPVolume" },
+  
+    { "label": "ПОСТУПЛЕНИЯ И РАСХОДЫ (Контейнер: volume)", "value": "volume", "isContainer": true },
+    { "label": "— Год отчетности (finYear)", "value": "finYear", "parent": "volume" },
+    { "label": "— Поступление средств (finPost)", "value": "finPost", "parent": "volume" },
+    { "label": "— Расходование средств (finRas)", "value": "finRas", "parent": "volume" },
+  
+    { "label": "План финансово-хозяйственной деятельности / Смета (finPlanDocLink)", "value": "finPlanDocLink" }
+  ],
+  "vacant": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+  
+    { "label": "ВАКАНТНЫЕ МЕСТА (Контейнер: vacant)", "value": "vacant", "isContainer": true },
+    { "label": "— Код специальности/направления (eduCode)", "value": "eduCode", "parent": "vacant" },
+    { "label": "— Наименование специальности (eduName)", "value": "eduName", "parent": "vacant" },
+    { "label": "— Уровень образования (eduLevel)", "value": "eduLevel", "parent": "vacant" },
+    { "label": "— Направленность/профиль (eduProf)", "value": "eduProf", "parent": "vacant" },
+    { "label": "— Курс (eduCourse)", "value": "eduCourse", "parent": "vacant" },
+    { "label": "— Форма обучения (eduForm)", "value": "eduForm", "parent": "vacant" },
+    { "label": "— Вакансий: федеральный бюджет (numberBFVacant)", "value": "numberBFVacant", "parent": "vacant" },
+    { "label": "— Вакансий: бюджет субъекта РФ (numberBRVacant)", "value": "numberBRVacant", "parent": "vacant" },
+    { "label": "— Вакансий: местный бюджет (numberBMVacant)", "value": "numberBMVacant", "parent": "vacant" },
+    { "label": "— Вакансий: за счет физ./юр. лиц (numberPVacant)", "value": "numberPVacant", "parent": "vacant" }
+  ],
+  "inter": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+  
+    { "label": "МЕЖДУНАРОДНЫЕ ДОГОВОРЫ (Контейнер: internationalDog)", "value": "internationalDog", "isContainer": true },
+    { "label": "— Название государства (stateName)", "value": "stateName", "parent": "internationalDog" },
+    { "label": "— Наименование организации (orgName)", "value": "orgName", "parent": "internationalDog" },
+    { "label": "— Реквизиты договора (dogReg)", "value": "dogReg", "parent": "internationalDog" }
+  ],
+  "catering": [
+    { "label": "Ссылка на дополнительную страницу (addRef)", "value": "addRef" },
+  
+    { "label": "УСЛОВИЯ ПИТАНИЯ (Контейнер: meals)", "value": "meals", "isContainer": true },
+    { "label": "— Наименование объекта питания (objName)", "value": "objName", "parent": "meals" },
+    { "label": "— Адрес объекта питания (objAddress)", "value": "objAddress", "parent": "meals" },
+    { "label": "— Площадь (objSq)", "value": "objSq", "parent": "meals" },
+    { "label": "— Количество мест (objCnt)", "value": "objCnt", "parent": "meals" },
+    { "label": "— Доступность для инвалидов (objOvz)", "value": "objOvz", "parent": "meals" },
+  
+    { "label": "ОХРАНА ЗДОРОВЬЯ (Контейнер: health)", "value": "health", "isContainer": true },
+    { "label": "— Наименование объекта (objName)", "value": "objName", "parent": "health" },
+    { "label": "— Адрес объекта (objAddress)", "value": "objAddress", "parent": "health" },
+    { "label": "— Площадь (objSq)", "value": "objSq", "parent": "health" },
+    { "label": "— Количество мест (objCnt)", "value": "objCnt", "parent": "health" },
+    { "label": "— Доступность для инвалидов (objOvz)", "value": "objOvz", "parent": "health" }
+  ]
+}

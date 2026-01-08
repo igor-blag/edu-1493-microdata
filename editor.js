@@ -1,25 +1,25 @@
 (function (wp) {
-    var el = wp.element.createElement;
-    var addFilter = wp.hooks.addFilter;
-    var Fragment = wp.element.Fragment;
-    var InspectorControls = wp.blockEditor.InspectorControls;
-    var PanelBody = wp.components.PanelBody;
-    var TextControl = wp.components.TextControl;
-    var SelectControl = wp.components.SelectControl; // Новый компонент
-    var createHigherOrderComponent = wp.compose.createHigherOrderComponent;
+    const { createElement: el, Fragment } = wp.element;
+    const { addFilter } = wp.hooks;
+    const { InspectorControls } = wp.blockEditor;
+    const { PanelBody, SelectControl, TextControl } = wp.components;
+    const { createHigherOrderComponent } = wp.compose;
+    const { useSelect } = wp.data;
 
-    // Читаем данные из PHP
-    var pageSlug = window.eduSettings ? window.eduSettings.slug : '';
-    var dictionary = window.eduSettings ? window.eduSettings.dictionary : {};
-    var isEduPage = window.eduSettings ? window.eduSettings.isEduPage : false;
+    const settings = window.eduSettings || {};
+    const { slug: pageSlug, dictionary, isEduPage } = settings;
 
-    var allowedBlocks = ['core/group', 'core/paragraph', 'core/columns', 'core/column', 'core/table', 'core/list', 'core/list-item', 'core/heading', 'core/image'];
+    // Blocks that can have itemprop
+    const allowedBlocks = ['core/group', 'core/paragraph', 'core/columns', 'core/column', 'core/table', 'core/list', 'core/list-item', 'core/heading', 'core/image'];
+    // Blocks treated as "containers" for parent-level tags
+    const containerBlocks = ['core/group', 'core/columns', 'core/column'];
 
+    // Register attribute
     addFilter(
         'blocks.registerBlockType',
         'edu-1493/add-itemprop-attribute',
-        function (settings, name) {
-            if (allowedBlocks.indexOf(name) !== -1) {
+        (settings, name) => {
+            if (allowedBlocks.includes(name)) {
                 settings.attributes = Object.assign({}, settings.attributes, {
                     itemPropValue: { type: 'string', default: '' },
                 });
@@ -28,34 +28,59 @@
         }
     );
 
-    var withInspectorControls = createHigherOrderComponent(function (BlockEdit) {
-        return function (props) {
-            if (allowedBlocks.indexOf(props.name) === -1) {
+    const withInspectorControls = createHigherOrderComponent((BlockEdit) => {
+        return (props) => {
+            if (!allowedBlocks.includes(props.name)) {
                 return el(BlockEdit, props);
             }
 
-            // Логика выбора контрола
-            var inputControl;
+            // Detect parent's itemprop attribute
+            const parentItemProp = useSelect((select) => {
+                const { getBlockParents, getBlockAttributes } = select('core/block-editor');
+                const parents = getBlockParents(props.clientId);
+                if (parents.length > 0) {
+                    const lastParentId = parents[parents.length - 1];
+                    const attrs = getBlockAttributes(lastParentId);
+                    return attrs ? attrs.itemPropValue : null;
+                }
+                return null;
+            }, [props.clientId]);
+
+            let inputControl;
 
             if (isEduPage) {
-                // Если мы на спец. странице — показываем выпадающий список
+                const pageTags = dictionary[pageSlug] || [];
+                const isCurrentContainer = containerBlocks.includes(props.name);
+
+                // Filter options based on logic:
+                // 1. If parent has an itemprop, show tags that belong to that parent.
+                // 2. If no parent itemprop, show top-level tags or container tags.
+                const filteredOptions = pageTags.filter(tag => {
+                    if (parentItemProp) {
+                        return tag.parent === parentItemProp;
+                    } else {
+                        // If current block is container, show tags marked as containers
+                        // If it's a regular block, show tags that have no parent requirement
+                        return tag.isContainer ? isCurrentContainer : !tag.parent;
+                    }
+                });
+
+                const options = [
+                    { label: '-- Select Tag --', value: '' },
+                    ...filteredOptions.map(t => ({ label: t.label, value: t.value }))
+                ];
+
                 inputControl = el(SelectControl, {
-                    label: 'Тег для раздела "' + pageSlug + '"',
+                    label: parentItemProp ? `Child of ${parentItemProp}` : 'Itemprop Tag',
                     value: props.attributes.itemPropValue,
-                    options: dictionary[pageSlug],
-                    onChange: function (value) {
-                        props.setAttributes({ itemPropValue: value });
-                    },
+                    options: options,
+                    onChange: (value) => props.setAttributes({ itemPropValue: value }),
                 });
             } else {
-                // Если это обычная страница — текстовое поле (для ручного ввода)
-                // Или можно вернуть null, чтобы скрыть поле совсем
                 inputControl = el(TextControl, {
-                    label: 'itemprop (ручной ввод)',
+                    label: 'itemprop (manual)',
                     value: props.attributes.itemPropValue,
-                    onChange: function (value) {
-                        props.setAttributes({ itemPropValue: value });
-                    },
+                    onChange: (value) => props.setAttributes({ itemPropValue: value }),
                 });
             }
 
@@ -68,10 +93,10 @@
                     null,
                     el(
                         PanelBody,
-                        { title: 'Микроразметка Рособрнадзора', initialOpen: true },
+                        { title: 'Edu 1493 Microdata', initialOpen: true },
                         inputControl,
                         el('p', { style: { fontSize: '11px', color: '#757575' } }, 
-                           isEduPage ? 'Выбраны теги, разрешенные для этой страницы.' : 'Страница не опознана как спец. раздел.')
+                           isEduPage ? 'Tags are filtered by page section and hierarchy.' : 'Manual entry mode (Not an Edu section).')
                     )
                 )
             );
