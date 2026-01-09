@@ -1,9 +1,9 @@
-=== Edu 1493 Microdata Extender ===
-Contributors: your-username
-Tags: rosobrnadzor, 1493, education, microdata, gutenberg, schema, russian-education
+=== Edu 1493 Microdata ===
+Contributors: Igor-blag
+Tags: rosobrnadzor, microdata, gutenberg, schema, russian-education
 Requires at least: 6.4
-Tested up to: 6.4
-Requires PHP: 8.2
+Tested up to: 6.9
+Requires PHP: 7.4
 Stable tag: 1.1.0
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
