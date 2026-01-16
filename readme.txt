@@ -1,5 +1,5 @@
 === Edu 1493 Microdata ===
-Contributors: Igor-blag
+Contributors: igb7
 Tags: rosobrnadzor, microdata, gutenberg, schema, russian-education
 Requires at least: 6.4
 Tested up to: 6.9
